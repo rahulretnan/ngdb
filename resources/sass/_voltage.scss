@@ -1,0 +1,63 @@
+$red: #e31212;
+$pink: #ff4ba8;
+$purple: #ee1adc;
+$blue: #1537ac;
+$cyan: #4bf7ff;
+$green: #0adc1e;
+
+#speedtest2 {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    // background: rgba(#fff, 0.5);
+    border-radius: 6px;
+    // box-shadow: 0 12px 32px rgba($blue, 0.5);
+    box-sizing: border-box;
+    margin: auto;
+    #voltage {
+        width: 100%;
+        height: 100%;
+        padding: 12px;
+        background: #1d2124;
+        border-radius: 50%;
+        box-shadow: 0 0 32px rgba($blue, 0.25), inset 0 -192px 192px -240px $red;
+        box-sizing: border-box;
+        path:first-child {
+            opacity: 1 !important;
+            display: block !important;
+        }
+    }
+    #voltage-label {
+        position: absolute;
+        top: 47.5%;
+        left: 50%;
+        font-size: 64px;
+        transform: translate(-50%,-50%);
+        color: $red;
+        &:after {
+            content: "Volts";
+            position: absolute;
+            font-size: 35%;
+            bottom: 5px;
+            left: 50%;
+            transform: translate(-50%,100%);
+        }
+    }
+    &:before, &:after {
+        display: block;
+        position: absolute;
+        bottom: 25%;
+        font-family: inherit;
+        font-size: 14px;
+        color: lighten(desaturate($blue, 62.5%), 25%);
+    }
+    &:before {
+        content: "0";
+        left: 28%;
+    }
+    &:after {
+        content: "100";
+        right: 28%;
+    }
+}

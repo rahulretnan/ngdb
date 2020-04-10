@@ -1,0 +1,480 @@
+body {
+    font-family: 'Montserrat', 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Calibri, Arial, sans-serif;
+    color: #6b7381;
+    background: #f2f2f2;
+}
+.jumbotron {
+    background: #6b7381;
+    color: #bdc1c8;
+    h1 {
+        color: #fff;
+    }
+}
+.example {
+    margin: 4rem auto;
+    >.row {
+        margin-top: 2rem;
+        height: 5rem;
+        vertical-align: middle;
+        text-align: center;
+        border: 1px solid rgba(189, 193, 200, 0.5);
+        &:first-of-type {
+            border: none;
+            height: auto;
+            text-align: left;
+        }
+    }
+    h3 {
+        font-weight: 400;
+        >small {
+            font-weight: 200;
+            font-size: 0.75em;
+            color: #939aa5;
+        }
+    }
+    h6 {
+        font-weight: 700;
+        font-size: 0.65rem;
+        letter-spacing: 3.32px;
+        text-transform: uppercase;
+        color: #bdc1c8;
+        margin: 0;
+        line-height: 5rem;
+    }
+    .btn-toggle {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.btn-toggle {
+    margin: 0 4rem;
+    padding: 0;
+    position: relative;
+    border: none;
+    height: 1.5rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    color: #6b7381;
+    background: #bdc1c8;
+    &:focus {
+        outline: none;
+    }
+    &:focus.active {
+        outline: none;
+    }
+    &:before {
+        line-height: 1.5rem;
+        width: 4rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        transition: opacity 0.25s;
+        content: 'Off';
+        left: -4rem;
+        color: #6b7381;
+    }
+    &:after {
+        line-height: 1.5rem;
+        width: 4rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        transition: opacity 0.25s;
+        content: 'On';
+        right: -4rem;
+        opacity: 0.5;
+        color: #6b7381;
+    }
+    >.handle {
+        position: absolute;
+        top: 0.1875rem;
+        left: 0.1875rem;
+        width: 1.125rem;
+        height: 1.125rem;
+        border-radius: 1.125rem;
+        background: #fff;
+        transition: left 0.25s;
+    }
+}
+.btn-toggle.focus {
+    outline: none;
+}
+.btn-toggle.focus.active {
+    outline: none;
+}
+.btn-toggle.active {
+    transition: background-color 0.25s;
+    background-color: #29b5a8;
+    >.handle {
+        left: 1.6875rem;
+        transition: left 0.25s;
+    }
+    &:before {
+        opacity: 0.5;
+    }
+    &:after {
+        opacity: 1;
+    }
+}
+.btn-toggle.btn-sm {
+    &:before {
+        line-height: -0.5rem;
+        color: #fff;
+        letter-spacing: 0.75px;
+        left: 0.4125rem;
+        width: 2.325rem;
+        text-align: right;
+        line-height: 1.5rem;
+        width: 0.5rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.55rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        transition: opacity 0.25s;
+        content: 'Off';
+        left: -0.5rem;
+    }
+    &:after {
+        line-height: -0.5rem;
+        color: #fff;
+        letter-spacing: 0.75px;
+        left: 0.4125rem;
+        width: 2.325rem;
+        text-align: left;
+        opacity: 0;
+        line-height: 1.5rem;
+        width: 0.5rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.55rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        transition: opacity 0.25s;
+        content: 'On';
+        right: -0.5rem;
+        opacity: 0.5;
+    }
+    margin: 0 0.5rem;
+    padding: 0;
+    position: relative;
+    border: none;
+    height: 1.5rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    &:focus {
+        outline: none;
+    }
+    &:focus.active {
+        outline: none;
+    }
+    >.handle {
+        position: absolute;
+        top: 0.1875rem;
+        left: 0.1875rem;
+        width: 1.125rem;
+        height: 1.125rem;
+        border-radius: 1.125rem;
+        background: #fff;
+        transition: left 0.25s;
+    }
+}
+.btn-toggle.btn-sm.active {
+    &:before {
+        opacity: 0;
+        opacity: 0.5;
+    }
+    &:after {
+        opacity: 1;
+        opacity: 1;
+    }
+    transition: background-color 0.25s;
+    >.handle {
+        left: 1.6875rem;
+        transition: left 0.25s;
+    }
+}
+.btn-toggle.btn-xs {
+    &:before {
+        display: none;
+        line-height: 1rem;
+        width: 0;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        transition: opacity 0.25s;
+        content: 'Off';
+        left: 0;
+    }
+    &:after {
+        display: none;
+        line-height: 1rem;
+        width: 0;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        transition: opacity 0.25s;
+        content: 'On';
+        right: 0;
+        opacity: 0.5;
+    }
+    margin: 0 0;
+    padding: 0;
+    position: relative;
+    border: none;
+    height: 1rem;
+    width: 2rem;
+    border-radius: 1rem;
+    &:focus {
+        outline: none;
+    }
+    &:focus.active {
+        outline: none;
+    }
+    >.handle {
+        position: absolute;
+        top: 0.125rem;
+        left: 0.125rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 0.75rem;
+        background: #fff;
+        transition: left 0.25s;
+    }
+}
+.btn-toggle.btn-lg {
+    margin: 0 5rem;
+    padding: 0;
+    position: relative;
+    border: none;
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 2.5rem;
+    &:focus {
+        outline: none;
+    }
+    &:focus.active {
+        outline: none;
+    }
+    &:before {
+        line-height: 2.5rem;
+        width: 5rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        transition: opacity 0.25s;
+        content: 'Off';
+        left: -5rem;
+    }
+    &:after {
+        line-height: 2.5rem;
+        width: 5rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        transition: opacity 0.25s;
+        content: 'On';
+        right: -5rem;
+        opacity: 0.5;
+    }
+    >.handle {
+        position: absolute;
+        top: 0.3125rem;
+        left: 0.3125rem;
+        width: 1.875rem;
+        height: 1.875rem;
+        border-radius: 1.875rem;
+        background: #fff;
+        transition: left 0.25s;
+    }
+}
+.btn-toggle.btn-lg.focus {
+    outline: none;
+}
+.btn-toggle.btn-lg.focus.active {
+    outline: none;
+}
+.btn-toggle.btn-lg.active {
+    transition: background-color 0.25s;
+    >.handle {
+        left: 2.8125rem;
+        transition: left 0.25s;
+    }
+    &:before {
+        opacity: 0.5;
+    }
+    &:after {
+        opacity: 1;
+    }
+}
+.btn-toggle.btn-lg.btn-sm {
+    &:before {
+        line-height: 0.5rem;
+        color: #fff;
+        letter-spacing: 0.75px;
+        left: 0.6875rem;
+        width: 3.875rem;
+        text-align: right;
+    }
+    &:after {
+        line-height: 0.5rem;
+        color: #fff;
+        letter-spacing: 0.75px;
+        left: 0.6875rem;
+        width: 3.875rem;
+        text-align: left;
+        opacity: 0;
+    }
+}
+.btn-toggle.btn-lg.btn-sm.active {
+    &:before {
+        opacity: 0;
+    }
+    &:after {
+        opacity: 1;
+    }
+}
+.btn-toggle.btn-lg.btn-xs {
+    &:before {
+        display: none;
+    }
+    &:after {
+        display: none;
+    }
+}
+.btn-toggle.btn-sm.focus {
+    outline: none;
+}
+.btn-toggle.btn-sm.focus.active {
+    outline: none;
+}
+.btn-toggle.btn-sm.btn-sm {
+    &:before {
+        line-height: -0.5rem;
+        color: #fff;
+        letter-spacing: 0.75px;
+        left: 0.4125rem;
+        width: 2.325rem;
+        text-align: right;
+    }
+    &:after {
+        line-height: -0.5rem;
+        color: #fff;
+        letter-spacing: 0.75px;
+        left: 0.4125rem;
+        width: 2.325rem;
+        text-align: left;
+        opacity: 0;
+    }
+}
+.btn-toggle.btn-sm.btn-sm.active {
+    &:before {
+        opacity: 0;
+    }
+    &:after {
+        opacity: 1;
+    }
+}
+.btn-toggle.btn-sm.btn-xs {
+    &:before {
+        display: none;
+    }
+    &:after {
+        display: none;
+    }
+}
+.btn-toggle.btn-xs.focus {
+    outline: none;
+}
+.btn-toggle.btn-xs.focus.active {
+    outline: none;
+}
+.btn-toggle.btn-xs.active {
+    transition: background-color 0.25s;
+    >.handle {
+        left: 1.125rem;
+        transition: left 0.25s;
+    }
+    &:before {
+        opacity: 0.5;
+    }
+    &:after {
+        opacity: 1;
+    }
+}
+.btn-toggle.btn-xs.btn-sm {
+    &:before {
+        line-height: -1rem;
+        color: #fff;
+        letter-spacing: 0.75px;
+        left: 0.275rem;
+        width: 1.55rem;
+        text-align: right;
+    }
+    &:after {
+        line-height: -1rem;
+        color: #fff;
+        letter-spacing: 0.75px;
+        left: 0.275rem;
+        width: 1.55rem;
+        text-align: left;
+        opacity: 0;
+    }
+}
+.btn-toggle.btn-xs.btn-sm.active {
+    &:before {
+        opacity: 0;
+    }
+    &:after {
+        opacity: 1;
+    }
+}
+.btn-toggle.btn-xs.btn-xs {
+    &:before {
+        display: none;
+    }
+    &:after {
+        display: none;
+    }
+}
+.btn-toggle.btn-secondary {
+    color: #6b7381;
+    background: #bdc1c8;
+    &:before {
+        color: #6b7381;
+    }
+    &:after {
+        color: #6b7381;
+    }
+}
+.btn-toggle.btn-secondary.active {
+    background-color: #ff8300;
+}
