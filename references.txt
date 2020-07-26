@@ -1,0 +1,2 @@
+https://github.com/rkoptev/ACS712-arduino
+https://github.com/Abdurraziq/ZMPT101B-arduino
